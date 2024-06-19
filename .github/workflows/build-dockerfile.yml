@@ -18,5 +18,6 @@ jobs:
       # - uses: prometheus/promci@3cb0c3871f223bd5ce1226995bd52ffb314798b6 # v0.1.0
       # - uses: ./.github/promci/actions/setup_environment
       - run: pwd 
+      - run: ls
       - run: cd ../../ && pwd
       - run: docker build -t node:1212 ./dockerfile/
