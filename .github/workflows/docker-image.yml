@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/mytest_docker123/node:18.3.20
     - name: docker login
-      run: docker login --username=${DOCKER_LOGIN_USER} --password=${DOCKER_LOGIN_PASS} ${DOCKER_LOGIN_URL}
+      run: docker login --username=${DOCKER_LOGIN_USER} --password=${DOCKER_LOGIN_PASS} registry.cn-hangzhou.aliyuncs.com
     - name: docker push 
       run: docker push registry.cn-hangzhou.aliyuncs.com/mytest_docker123/node:18.3.20
