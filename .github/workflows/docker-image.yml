@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag node:$(date +%s)
+      run: docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/yushihao/node:18.3.20
+    - name: docker push 
+      run: docker push registry.cn-hangzhou.aliyuncs.com/yushihao/node:18.3.20
