@@ -23,7 +23,10 @@ jobs:
       with:
         registry: ${{ secrets.DOCKER_LOGIN_URL }}
         username: ${{ secrets.DOCKER_LOGIN_USER }}
-        password: ${{ secrets.DOCKER_LOGIN_PASS }}     
+        password: ${{ secrets.DOCKER_LOGIN_PASS }}   
+        
+    - name: docker pull
+      run: docker pull  registry.cn-hangzhou.aliyuncs.com/mytest_docker123/node:18.3.20
     #   run: docker login --username=xadrsysh --password=December@1 registry.cn-hangzhou.aliyuncs.com
     # - name: docker login
     # - name: docker login
