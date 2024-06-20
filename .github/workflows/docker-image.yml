@@ -18,10 +18,12 @@ jobs:
       run: docker build . --file Dockerfile --tag registry.cn-hangzhou.aliyuncs.com/mytest_docker123/node:18.3.20
     
    
-    - uses: docker/login-action@v1
-      with:
-        username: ${{secrets.DOCKER_LOGIN_USER}}
-        password: ${{secrets.DOCKER_LOGIN_PASS}}     
+     - name: docker login
+       uses: docker/login-action@v1
+       with:
+         registry: ${{ secrets.DOCKER_LOGIN_URL }}
+         username: ${{ secrets.DOCKER_LOGIN_USER }}
+         password: ${{ secrets.DOCKER_LOGIN_PASS }}     
     #   run: docker login --username=xadrsysh --password=December@1 registry.cn-hangzhou.aliyuncs.com
     # - name: docker login
     - name: docker login
