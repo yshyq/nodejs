@@ -1,1 +1,1 @@
-FROM node:18-alpine3.20 as node
+FROM redis:6.2.120 as redis
