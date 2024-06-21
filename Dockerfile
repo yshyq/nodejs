@@ -1,1 +1,1 @@
-FROM redis:6.2.120 as redis
+FROM redis:6.2.12 as redis
